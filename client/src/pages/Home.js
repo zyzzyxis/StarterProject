@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import axios from 'axios'
+import { AuthContext } from '../providers/AuthProvider'
 
 // functional component 
 const Home = () => {
   const [testData, setTestData] = useState(null)
   const [loading, setLoading] = useState(true)
+  const {user, x} = useContext(AuthContext)
 
   useEffect(()=>{
     getData()
@@ -27,6 +29,7 @@ const Home = () => {
     <div>
       <h1>Home</h1>
       {testData && testData.dataHere}
+      <p>username: {user.name} age: {user.age}</p>
     </div>
   )
 }

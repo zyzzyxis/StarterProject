@@ -6,15 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import "semantic-ui-css/semantic.min.css"
 import {BrowserRouter} from 'react-router-dom'
 import { initMiddleware, } from 'devise-axios';
+import AuthProvider from './providers/AuthProvider';
 
 initMiddleware();
 
 ReactDOM.render(
+  <AuthProvider>
   <BrowserRouter>
   
     <App />
   
-  </BrowserRouter>,
+  </BrowserRouter>
+  </AuthProvider>,
   document.getElementById('root')
 );
 
