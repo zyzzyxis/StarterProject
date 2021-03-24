@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import About from './pages/About';
 import PRIMARY_COLOR from './styles'
 import ComponentDemo from './pages/ComponentDemo';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
     <Switch>
       <Route exact path='/' component={Home}/>
       <Route path='/about' component={About}/>
+      <Route path='/register' component={Register}/>
       <Route path='/componentDemo' component={ComponentDemo}/>
     </Switch>
     </Container>

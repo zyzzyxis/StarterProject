@@ -29,7 +29,7 @@ const Home = () => {
     <div>
       <h1>Home</h1>
       {testData && testData.dataHere}
-      <p>username: {user.name} age: {user.age}</p>
+      {/* <p>username: {user.name} age: {user.age}</p> */}
     </div>
   )
 }
